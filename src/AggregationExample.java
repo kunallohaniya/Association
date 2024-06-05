@@ -1,32 +1,37 @@
 class Address{
     String houseNo;
+    String street;
     String city;
     String country;
 
-    public Address(String houseNo, String city, String country) {
+    public Address(String houseNo, String street, String city, String country) {
         this.houseNo = houseNo;
+        this.street = street;
         this.city = city;
         this.country = country;
     }
 }
 
-class Employee {
+class Employee{
     String name;
     Address address;
 
-    public Employee( String name, Address address){
-        this.name=name;
-        this.address=address;
+    public Employee(String name, Address address) {
+        this.name = name;
+        this.address = address;
     }
+
     public void displayDetails() {
-        System.out.println(address.houseNo + " " + address.city + " " + address.country);
+        System.out.println(address.houseNo + " " + address.street + " " + address.city + " " + address.country);
     }
 }
 
-public class AggregationExample {
+public class AggregationExample{
     public static void main(String[] args) {
-        Address a1 = new Address("HN209","faridabad","INDIA");
-    Employee e1 = new Employee("kunal",a1);
-    e1.displayDetails();
+        Address a1 = new Address("HN: 6/209", "Kumhar Mohalla","Faridabad", "India");
+        Employee e1 = new Employee("kunal prajapati", a1);
+        e1.displayDetails();
     }
 }
+
+
